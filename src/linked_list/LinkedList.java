@@ -2,6 +2,8 @@ package linked_list;
 
 import exception.MyException;
 
+import java.util.Collection;
+
 public class LinkedList<T> {
     public class Node<T> {
         T data;
@@ -57,6 +59,18 @@ public class LinkedList<T> {
 
         }
 
+    }
+
+    public boolean addAll(LinkedList<T> data) {
+        Node<T> temp = head;
+        if (head == null) {
+            head = data.head;
+        }
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = data.head;
+        return  true;
     }
 
     public boolean contains(T data) {

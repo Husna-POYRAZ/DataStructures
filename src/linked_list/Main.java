@@ -2,6 +2,8 @@ package linked_list;
 
 import exception.MyException;
 
+import java.util.Collection;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -28,5 +30,18 @@ public class Main {
         System.out.println(list.contains(10));
         System.out.println("Dizi boş : " + list.isEmty());
         System.out.println("Dizide 5. elemanın indexi = " + list.lastIndexOf(5));
+        System.out.println("-----------------");
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        // use add() method to add elements in list2
+        list2.add(25);
+        list2.add(30);
+        list2.add(31);
+        list2.add(35);
+
+
+        System.out.println(list.addAll(list2));
+        list.showList();
+
     }
 }
